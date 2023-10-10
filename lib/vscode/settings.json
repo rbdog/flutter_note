@@ -1,0 +1,14 @@
+{
+  // ここは今後の動画で説明します
+  "ios.simulator": "XXXX-IOS-SIMULATOR-ID-XXXX",
+  "ios.device": "XXXX-IOS-DEVICE-ID-XXXX",
+  "android.emulator": "XXXX-ANDROID-EMULATOR-ID-XXXX",
+  "android.device": "XXXX-ANDROID-DEVICE-ID-XXXX",
+
+  // フォーマット・保存
+  "editor.formatOnSave": true,
+
+  "[dart]": {
+    "editor.rulers": [0]
+  }
+}

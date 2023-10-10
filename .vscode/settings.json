@@ -1,0 +1,43 @@
+{
+  // ここは今後の動画で説明します
+  "ios.simulator": "XXXX-IOS-SIMULATOR-ID-XXXX",
+  "ios.device": "XXXX-IOS-DEVICE-ID-XXXX",
+  "android.emulator": "XXXX-ANDROID-EMULATOR-ID-XXXX",
+  "android.device": "XXXX-ANDROID-DEVICE-ID-XXXX",
+  // フォーマット・保存
+  "editor.formatOnSave": true,
+  "[dart]": {
+    "editor.rulers": [
+      0
+    ]
+  },
+  // "files.exclude": {
+  //   "**/.dart_tool": true,
+  //   "**/build": true,
+  //   "**/web": false,
+  //   "**/.metadata": true,
+  //   "**/.packages": true,
+  //   "**/pubspec.lock": true,
+  //   "**/.flutter-plugins": true,
+  //   "**/.flutter-plugins-dependencies": true,
+  //   "**/.classpath": true,
+  //   "**/.project": true,
+  //   "**/.settings": true,
+  //   "**/.factorypath": true,
+  //   "**/**.freezed.dart": false,
+  //   "**/**.g.dart": false,
+  //   "**/generated_plugin_registrant.dart": true,
+  //   "**/.gitattributes": true,
+  //   "**/**.iml": true,
+  //   "**/LICENSE": true,
+  //   "**/.idea": true,
+  //   "**/android": true,
+  //   "**/ios": true,
+  //   "**/windows": true,
+  //   "**/.gitignore": true,
+  //   "**/.firebase": true,
+  //   "**/.github": true,
+  //   "**/.firebaserc": true,
+  //   "**/firebase.json": true
+  // }
+}

@@ -1,0 +1,59 @@
+name: banana
+description: Flutter入門
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  arkit_plugin:
+  flutter:
+    sdk: flutter
+  flutter_riverpod:
+  flutter_hooks:
+  riverpod_annotation:
+  google_fonts:
+  flutter_slidable:
+  json_annotation:
+  freezed_annotation:
+  liveroom:
+  percent_indicator:
+  go_router:
+  pixel_color_image:
+  web_socket_channel:
+  firebase_core:
+  firebase_analytics:
+  firebase_auth:
+  google_sign_in:
+  device_preview_minus: # device_preview が開発停止中なので代わりに使う
+  envied:
+  shared_preferences:
+  cloud_firestore:
+  intl:
+  youtube_player_iframe:
+  url_launcher:
+  flutter_web_plugins:
+    sdk: flutter
+
+dev_dependencies:
+  freezed:
+  build_runner:
+  json_serializable:
+  flutter_test:
+    sdk: flutter
+  flutter_lints:
+  riverpod_generator:
+  envied_generator:
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/google_fonts/
+    - assets/fonts/
+    - assets/stub/
+  fonts:
+    - family: NotoSansJP
+      fonts:
+        - asset: assets/fonts/NotoSansJP-Medium.ttf

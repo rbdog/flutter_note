@@ -1,0 +1,1 @@
+firebase deploy --only hosting:hello --project=hello-rubydog

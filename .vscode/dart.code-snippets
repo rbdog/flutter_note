@@ -1,0 +1,92 @@
+{
+  "@freezed": {
+    "prefix": "@freezed",
+    "scope": "dart",
+    "body": [
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "part '$TM_FILENAME_BASE.freezed.dart';",
+      "",
+      "@freezed",
+      "class $1 with _$$1 {",
+      "  const factory $1({",
+      "    required int data1,",
+      "    required int data2,",
+      "    required int data3,",
+      "  }) = _$1;",
+      "}"
+    ]
+  },
+  "@freezed_json": {
+    "prefix": "@freezed_json",
+    "scope": "dart",
+    "body": [
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "part '$TM_FILENAME_BASE.freezed.dart';",
+      "part '$TM_FILENAME_BASE.g.dart';",
+      "",
+      "@freezed",
+      "class ${1:Xxx} with _$${1:Xxx} {",
+      "  const factory ${1:Xxx}({",
+      "",
+      "    // required <Type> <field>,",
+      "",
+      "  }) = _${1:Xxx};",
+      "  factory ${1:Xxx}.fromJson(Map<String, dynamic> json) => _$${1:Xxx}FromJson(json);",
+      "}"
+    ]
+  },
+  "build_runner": {
+    "prefix": "build_runner",
+    "body": [
+      "flutter pub run build_runner build --delete-conflicting-outputs"
+    ]
+  },
+  "state_provider": {
+    "prefix": "state_provider",
+    "scope": "dart",
+    "body": [
+      "final $1Provider = StateProvider<int>((ref) {",
+      "  return 0;",
+      "});"
+    ]
+  },
+  "consumer": {
+    "prefix": "consumer",
+    "scope": "dart",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_riverpod/flutter_riverpod.dart';",
+      "",
+      "class $1 extends ConsumerWidget {",
+      "  const $1({",
+      "    super.key,",
+      "  });",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context, WidgetRef ref) {",
+      "    return Container();",
+      "  }",
+      "}"
+    ]
+  },
+  "enum_codable": {
+    "prefix": "enum_codable",
+    "scope": "dart",
+    "body": [
+      "enum $1 {",
+      "  aaa(0),",
+      "  bbb(1),",
+      "  ccc(2);",
+      "",
+      "  const $1(this.encoded);",
+      "  final int encoded;",
+      "  factory $1.fromJson(dynamic json) {",
+      "    return $1.values.firstWhere((value) {",
+      "      return value.encoded == json;",
+      "    });",
+      "  }",
+      "  dynamic toJson() => encoded;",
+      "}"
+    ]
+  }
+}

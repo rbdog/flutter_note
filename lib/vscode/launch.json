@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/main.dart",
+      "args": ["--debug", "-t", "lib/main.dart", "-d", "chrome"]
+    },
+    {
+      "name": "iOS Simulator",
+      "request": "launch",
+      "type": "dart",
+      "preLaunchTask": "open_ios_sim",
+      "program": "lib/main.dart",
+      "args": [
+        "--debug",
+        "-t",
+        "lib/main.dart",
+        "-d",
+        "${config:ios.simulator}"
+      ]
+    },
+    {
+      "name": "iOS Device",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": ["--debug", "-t", "lib/main.dart", "-d", "${config:ios.device}"]
+    },
+    {
+      "name": "Android Emulator",
+      "request": "launch",
+      "type": "dart",
+      "preLaunchTask": "open_android_emu",
+      "program": "lib/main_devlopment.dart",
+      "args": [
+        "--debug",
+        "-t",
+        "lib/main_devlopment.dart",
+        "-d",
+        "${config:android.emulator}"
+      ]
+    },
+    {
+      "name": "Android Device",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--debug",
+        "-t",
+        "lib/main.dart",
+        "-d",
+        "${config:android.device}"
+      ]
+    }
+  ]
+}

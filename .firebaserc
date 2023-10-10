@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "flutter-image-network"
+  },
+  "targets": {
+    "hello-rubydog": {
+      "hosting": {
+        "img": [
+          "flutter-image-network"
+        ],
+        "hello": [
+          "rubydog"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
