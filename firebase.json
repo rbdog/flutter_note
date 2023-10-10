@@ -1,0 +1,43 @@
+{
+  "hosting": [
+    {
+      "target": "img",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "headers": [
+        {
+          "source": "inu.jpeg",
+          "headers": [
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target": "hello",
+      "public": "build/web",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ],
+  "emulators": {
+    "auth": {
+      "host": "localhost",
+      "port": "9099"
+    },
+    "hosting": {
+      "host": "localhost",
+      "port": "5004"
+    }
+  }
+}

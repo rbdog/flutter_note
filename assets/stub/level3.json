@@ -1,0 +1,21 @@
+{
+  "title": "ほくほくカレー",
+  "calories": 600,
+  "vegetables": [
+    {
+      "name": "タマネギ",
+      "color": "白色",
+      "season": "すべての季節"
+    },
+    {
+      "name": "ニンジン",
+      "color": "オレンジ",
+      "season": "春夏と冬"
+    },
+    {
+      "name": "ジャガイモ",
+      "color": "茶色",
+      "season": "春と秋"
+    }
+  ]
+}

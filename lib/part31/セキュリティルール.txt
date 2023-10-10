@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+    match /{coll}/{doc} {
+      allow create: if true; // 新しいデータ追加してOK
+      allow read: if true; // 誰でもデータを見てOK
+      allow update: if true; // データを変更してOK
+      allow delete: if true; // データを削除してOK
+    }
+  }
+}
+
+// true --> OK
+// false --> 禁止

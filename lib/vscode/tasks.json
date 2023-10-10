@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "open_ios_sim",
+      "type": "shell",
+      // ここは今後の動画で説明します
+      "command": "open -a Simulator --args -CurrentDeviceUDID ${config:ios.simulator}"
+    },
+    {
+      "label": "open_android_emu",
+      "type": "shell",
+      // ここは今後の動画で説明します
+      "command": "xxx xxx xxx ${config:android.emulator}"
+    }
+  ]
+}
