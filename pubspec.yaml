@@ -26,7 +26,7 @@ dependencies:
   firebase_analytics:
   firebase_auth:
   google_sign_in:
-  device_preview_minus: # device_preview が開発停止中なので代わりに使う
+  device_preview_minus: # device_preview が開発停止したため代わりに使う
   envied:
   shared_preferences:
   cloud_firestore:
