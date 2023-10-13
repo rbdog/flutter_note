@@ -3,6 +3,9 @@
 /*
   最新のFlutterに対応するため、動画と少しコードが変わりました
   コントローラーの正しい使い方は、別の動画で説明します
+
+  ↓↓ 別の動画 ↓↓
+  https://youtu.be/l1sUCFtcsjo?si=tT8Swp7GuzmbQ6lv
 */
 
 import 'package:flutter/material.dart';
@@ -12,41 +15,48 @@ void main() {
   final controller = TextEditingController();
 
   // テキストフィールド本体
-  const textField = TextField(
+  final textField = TextField(
+    // コントローラ を このテキストフィールドに結びつける
+    controller: controller,
     // デコレーション
-    decoration: InputDecoration(
+    decoration: const InputDecoration(
       border: OutlineInputBorder(),
       labelText: "あなたの名前",
       hintText: "カタカナで入力してください",
-      errorText: null, // エラーなし
+      errorText: null, // エラーメッセージは今回使わない。ここに書いたり消したりできる。
     ),
   );
 
-  // ボタンの関数
+  // 関数
   xxxx() {
-    // コントローラーから文字を取り出す
+    // コントローラーから文字を取り出して確認
     debugPrint(controller.text);
   }
 
   // ボタン
   final button = ElevatedButton(
+    // 関数を このボタンに結びつけておく
     onPressed: xxxx,
-    child: const Text('ボタン'),
+    child: const Text('ボタンです'),
   );
 
   // アプリ
-  final a = MaterialApp(
+  final app = MaterialApp(
+    // 画面
     home: Scaffold(
+      // 真ん中
       body: Center(
+        // 縦に並べる
         child: Column(
+          // いい感じにスペース開ける
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            // コンテナを使って テキストフィールド の大きさを整える
+            // コンテナ
             Container(
-              width: 300,
-              child: textField,
+              width: 300, // 横幅
+              child: textField, // テキストフィールド
             ),
-            // コンテナの下にボタンをおく
+            // ボタンをおく
             button,
           ],
         ),
@@ -55,5 +65,5 @@ void main() {
   );
 
   // アプリを動かす
-  runApp(a);
+  runApp(app);
 }
