@@ -17,7 +17,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   // This widget is the root of your application.
 
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
 // * riverpod で使うための Consumerウィジェット を2つ合わせた
 // * ConsumerStatefulウィジェット というものを使う
 class MyHomePage extends ConsumerStatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  const MyHomePage({super.key});
 
   @override
   ConsumerState<MyHomePage> createState() => _MyHomePageState();
