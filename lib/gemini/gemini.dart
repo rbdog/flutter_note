@@ -2,7 +2,7 @@ import 'dart:typed_data';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 // APIキーの隠し方は envied の動画を参考にしてください
-const apiKey = 'AIzaSyB8_Hj8AwnUHVJ6Ph61rrfpsfJ2z4B7RY0';
+const apiKey = 'XXXXXXXX_AAAA1111BBBB2222CCCC3333DDDD44';
 
 class Gemini {
   Future<String?> getText(String prompt) async {
