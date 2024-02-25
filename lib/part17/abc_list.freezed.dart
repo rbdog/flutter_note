@@ -12,7 +12,7 @@ part of 'abc_list.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AbcList {
@@ -55,20 +55,21 @@ class _$AbcListCopyWithImpl<$Res, $Val extends AbcList>
 }
 
 /// @nodoc
-abstract class _$$_AbcListCopyWith<$Res> implements $AbcListCopyWith<$Res> {
-  factory _$$_AbcListCopyWith(
-          _$_AbcList value, $Res Function(_$_AbcList) then) =
-      __$$_AbcListCopyWithImpl<$Res>;
+abstract class _$$AbcListImplCopyWith<$Res> implements $AbcListCopyWith<$Res> {
+  factory _$$AbcListImplCopyWith(
+          _$AbcListImpl value, $Res Function(_$AbcListImpl) then) =
+      __$$AbcListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> values});
 }
 
 /// @nodoc
-class __$$_AbcListCopyWithImpl<$Res>
-    extends _$AbcListCopyWithImpl<$Res, _$_AbcList>
-    implements _$$_AbcListCopyWith<$Res> {
-  __$$_AbcListCopyWithImpl(_$_AbcList _value, $Res Function(_$_AbcList) _then)
+class __$$AbcListImplCopyWithImpl<$Res>
+    extends _$AbcListCopyWithImpl<$Res, _$AbcListImpl>
+    implements _$$AbcListImplCopyWith<$Res> {
+  __$$AbcListImplCopyWithImpl(
+      _$AbcListImpl _value, $Res Function(_$AbcListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -76,7 +77,7 @@ class __$$_AbcListCopyWithImpl<$Res>
   $Res call({
     Object? values = null,
   }) {
-    return _then(_$_AbcList(
+    return _then(_$AbcListImpl(
       null == values
           ? _value._values
           : values // ignore: cast_nullable_to_non_nullable
@@ -87,8 +88,8 @@ class __$$_AbcListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AbcList implements _AbcList {
-  _$_AbcList(final List<String> values) : _values = values;
+class _$AbcListImpl implements _AbcList {
+  _$AbcListImpl(final List<String> values) : _values = values;
 
   final List<String> _values;
   @override
@@ -104,10 +105,10 @@ class _$_AbcList implements _AbcList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AbcList &&
+            other is _$AbcListImpl &&
             const DeepCollectionEquality().equals(other._values, _values));
   }
 
@@ -118,17 +119,17 @@ class _$_AbcList implements _AbcList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AbcListCopyWith<_$_AbcList> get copyWith =>
-      __$$_AbcListCopyWithImpl<_$_AbcList>(this, _$identity);
+  _$$AbcListImplCopyWith<_$AbcListImpl> get copyWith =>
+      __$$AbcListImplCopyWithImpl<_$AbcListImpl>(this, _$identity);
 }
 
 abstract class _AbcList implements AbcList {
-  factory _AbcList(final List<String> values) = _$_AbcList;
+  factory _AbcList(final List<String> values) = _$AbcListImpl;
 
   @override
   List<String> get values;
   @override
   @JsonKey(ignore: true)
-  _$$_AbcListCopyWith<_$_AbcList> get copyWith =>
+  _$$AbcListImplCopyWith<_$AbcListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
