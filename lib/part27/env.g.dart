@@ -6,51 +6,58 @@ part of 'env.dart';
 // EnviedGenerator
 // **************************************************************************
 
-class _Env {
-  static const List<int> _enviedkeypass1 = [
-    3268763001,
-    63678212,
-    3322914694,
-    3995920302,
-    2779584293,
-    3390690629,
-    162800668,
-    1096488439,
-    577507887
+// coverage:ignore-file
+// ignore_for_file: type=lint
+final class _Env {
+  static const List<int> _enviedkeypass1 = <int>[
+    1090176458,
+    1224822555,
+    944442074,
+    1334648684,
+    693641025,
+    2399345540,
+    3367584671,
+    2788696320,
+    2998679594,
   ];
-  static const List<int> _envieddatapass1 = [
-    3268767128,
-    63674272,
-    3322910521,
-    3995916125,
-    2779588579,
-    3390694881,
-    162796719,
-    1096492349,
-    577512156
+
+  static const List<int> _envieddatapass1 = <int>[
+    1090188587,
+    1224835007,
+    944454245,
+    1334652831,
+    693645191,
+    2399349536,
+    3367596844,
+    2788692426,
+    2998667481,
   ];
-  static final pass1 = String.fromCharCodes(
-    List.generate(_envieddatapass1.length, (i) => i, growable: false)
-        .map((i) => _envieddatapass1[i] ^ _enviedkeypass1[i])
-        .toList(growable: false),
-  );
-  static const List<int> _enviedkeypass2 = [
-    2630793940,
-    2641372546,
-    1147492218,
-    1677103296,
-    2668132987
+
+  static final String pass1 = String.fromCharCodes(List<int>.generate(
+    _envieddatapass1.length,
+    (int i) => i,
+    growable: false,
+  ).map((int i) => _envieddatapass1[i] ^ _enviedkeypass1[i]));
+
+  static const List<int> _enviedkeypass2 = <int>[
+    2708233566,
+    894539785,
+    2427891548,
+    1981858917,
+    1057615028,
   ];
-  static const List<int> _envieddatapass2 = [
-    2630781499,
-    2641368433,
-    1147496366,
-    1677107260,
-    2668120770
+
+  static const List<int> _envieddatapass2 = <int>[
+    2708237745,
+    894544122,
+    2427887496,
+    1981871257,
+    1057610765,
   ];
-  static final pass2 = String.fromCharCodes(
-    List.generate(_envieddatapass2.length, (i) => i, growable: false)
-        .map((i) => _envieddatapass2[i] ^ _enviedkeypass2[i])
-        .toList(growable: false),
-  );
+
+  static final String pass2 = String.fromCharCodes(List<int>.generate(
+    _envieddatapass2.length,
+    (int i) => i,
+    growable: false,
+  ).map((int i) => _envieddatapass2[i] ^ _enviedkeypass2[i]));
 }

@@ -12,7 +12,7 @@ part of 'pack.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Pack _$PackFromJson(Map<String, dynamic> json) {
   return _Pack.fromJson(json);
@@ -83,9 +83,10 @@ class _$PackCopyWithImpl<$Res, $Val extends Pack>
 }
 
 /// @nodoc
-abstract class _$$_PackCopyWith<$Res> implements $PackCopyWith<$Res> {
-  factory _$$_PackCopyWith(_$_Pack value, $Res Function(_$_Pack) then) =
-      __$$_PackCopyWithImpl<$Res>;
+abstract class _$$PackImplCopyWith<$Res> implements $PackCopyWith<$Res> {
+  factory _$$PackImplCopyWith(
+          _$PackImpl value, $Res Function(_$PackImpl) then) =
+      __$$PackImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String size, int price, Vegetable content});
@@ -95,9 +96,10 @@ abstract class _$$_PackCopyWith<$Res> implements $PackCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PackCopyWithImpl<$Res> extends _$PackCopyWithImpl<$Res, _$_Pack>
-    implements _$$_PackCopyWith<$Res> {
-  __$$_PackCopyWithImpl(_$_Pack _value, $Res Function(_$_Pack) _then)
+class __$$PackImplCopyWithImpl<$Res>
+    extends _$PackCopyWithImpl<$Res, _$PackImpl>
+    implements _$$PackImplCopyWith<$Res> {
+  __$$PackImplCopyWithImpl(_$PackImpl _value, $Res Function(_$PackImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +109,7 @@ class __$$_PackCopyWithImpl<$Res> extends _$PackCopyWithImpl<$Res, _$_Pack>
     Object? price = null,
     Object? content = null,
   }) {
-    return _then(_$_Pack(
+    return _then(_$PackImpl(
       size: null == size
           ? _value.size
           : size // ignore: cast_nullable_to_non_nullable
@@ -126,11 +128,12 @@ class __$$_PackCopyWithImpl<$Res> extends _$PackCopyWithImpl<$Res, _$_Pack>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Pack implements _Pack {
-  const _$_Pack(
+class _$PackImpl implements _Pack {
+  const _$PackImpl(
       {required this.size, required this.price, required this.content});
 
-  factory _$_Pack.fromJson(Map<String, dynamic> json) => _$$_PackFromJson(json);
+  factory _$PackImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PackImplFromJson(json);
 
 // 大きさ
   @override
@@ -148,10 +151,10 @@ class _$_Pack implements _Pack {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Pack &&
+            other is _$PackImpl &&
             (identical(other.size, size) || other.size == size) &&
             (identical(other.price, price) || other.price == price) &&
             (identical(other.content, content) || other.content == content));
@@ -164,12 +167,12 @@ class _$_Pack implements _Pack {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PackCopyWith<_$_Pack> get copyWith =>
-      __$$_PackCopyWithImpl<_$_Pack>(this, _$identity);
+  _$$PackImplCopyWith<_$PackImpl> get copyWith =>
+      __$$PackImplCopyWithImpl<_$PackImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PackToJson(
+    return _$$PackImplToJson(
       this,
     );
   }
@@ -179,9 +182,9 @@ abstract class _Pack implements Pack {
   const factory _Pack(
       {required final String size,
       required final int price,
-      required final Vegetable content}) = _$_Pack;
+      required final Vegetable content}) = _$PackImpl;
 
-  factory _Pack.fromJson(Map<String, dynamic> json) = _$_Pack.fromJson;
+  factory _Pack.fromJson(Map<String, dynamic> json) = _$PackImpl.fromJson;
 
   @override // 大きさ
   String get size;
@@ -191,5 +194,6 @@ abstract class _Pack implements Pack {
   Vegetable get content;
   @override
   @JsonKey(ignore: true)
-  _$$_PackCopyWith<_$_Pack> get copyWith => throw _privateConstructorUsedError;
+  _$$PackImplCopyWith<_$PackImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

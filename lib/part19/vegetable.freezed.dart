@@ -12,7 +12,7 @@ part of 'vegetable.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Vegetable _$VegetableFromJson(Map<String, dynamic> json) {
   return _Vegetable.fromJson(json);
@@ -74,21 +74,22 @@ class _$VegetableCopyWithImpl<$Res, $Val extends Vegetable>
 }
 
 /// @nodoc
-abstract class _$$_VegetableCopyWith<$Res> implements $VegetableCopyWith<$Res> {
-  factory _$$_VegetableCopyWith(
-          _$_Vegetable value, $Res Function(_$_Vegetable) then) =
-      __$$_VegetableCopyWithImpl<$Res>;
+abstract class _$$VegetableImplCopyWith<$Res>
+    implements $VegetableCopyWith<$Res> {
+  factory _$$VegetableImplCopyWith(
+          _$VegetableImpl value, $Res Function(_$VegetableImpl) then) =
+      __$$VegetableImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String color, String season});
 }
 
 /// @nodoc
-class __$$_VegetableCopyWithImpl<$Res>
-    extends _$VegetableCopyWithImpl<$Res, _$_Vegetable>
-    implements _$$_VegetableCopyWith<$Res> {
-  __$$_VegetableCopyWithImpl(
-      _$_Vegetable _value, $Res Function(_$_Vegetable) _then)
+class __$$VegetableImplCopyWithImpl<$Res>
+    extends _$VegetableCopyWithImpl<$Res, _$VegetableImpl>
+    implements _$$VegetableImplCopyWith<$Res> {
+  __$$VegetableImplCopyWithImpl(
+      _$VegetableImpl _value, $Res Function(_$VegetableImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +99,7 @@ class __$$_VegetableCopyWithImpl<$Res>
     Object? color = null,
     Object? season = null,
   }) {
-    return _then(_$_Vegetable(
+    return _then(_$VegetableImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -117,12 +118,12 @@ class __$$_VegetableCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Vegetable implements _Vegetable {
-  const _$_Vegetable(
+class _$VegetableImpl implements _Vegetable {
+  const _$VegetableImpl(
       {required this.name, required this.color, required this.season});
 
-  factory _$_Vegetable.fromJson(Map<String, dynamic> json) =>
-      _$$_VegetableFromJson(json);
+  factory _$VegetableImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VegetableImplFromJson(json);
 
 // 名前
   @override
@@ -140,10 +141,10 @@ class _$_Vegetable implements _Vegetable {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Vegetable &&
+            other is _$VegetableImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.season, season) || other.season == season));
@@ -156,12 +157,12 @@ class _$_Vegetable implements _Vegetable {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VegetableCopyWith<_$_Vegetable> get copyWith =>
-      __$$_VegetableCopyWithImpl<_$_Vegetable>(this, _$identity);
+  _$$VegetableImplCopyWith<_$VegetableImpl> get copyWith =>
+      __$$VegetableImplCopyWithImpl<_$VegetableImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VegetableToJson(
+    return _$$VegetableImplToJson(
       this,
     );
   }
@@ -171,10 +172,10 @@ abstract class _Vegetable implements Vegetable {
   const factory _Vegetable(
       {required final String name,
       required final String color,
-      required final String season}) = _$_Vegetable;
+      required final String season}) = _$VegetableImpl;
 
   factory _Vegetable.fromJson(Map<String, dynamic> json) =
-      _$_Vegetable.fromJson;
+      _$VegetableImpl.fromJson;
 
   @override // 名前
   String get name;
@@ -184,6 +185,6 @@ abstract class _Vegetable implements Vegetable {
   String get season;
   @override
   @JsonKey(ignore: true)
-  _$$_VegetableCopyWith<_$_Vegetable> get copyWith =>
+  _$$VegetableImplCopyWith<_$VegetableImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

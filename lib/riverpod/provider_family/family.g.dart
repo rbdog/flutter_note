@@ -29,8 +29,6 @@ class _SystemHash {
   }
 }
 
-typedef FamilyRef = AutoDisposeProviderRef<int>;
-
 /// See also [family].
 @ProviderFor(family)
 const familyProvider = FamilyFamily();
@@ -77,10 +75,10 @@ class FamilyFamily extends Family<int> {
 class FamilyProvider extends AutoDisposeProvider<int> {
   /// See also [family].
   FamilyProvider(
-    this.id,
-  ) : super.internal(
+    String id,
+  ) : this._internal(
           (ref) => family(
-            ref,
+            ref as FamilyRef,
             id,
           ),
           from: familyProvider,
@@ -91,9 +89,43 @@ class FamilyProvider extends AutoDisposeProvider<int> {
                   : _$familyHash,
           dependencies: FamilyFamily._dependencies,
           allTransitiveDependencies: FamilyFamily._allTransitiveDependencies,
+          id: id,
         );
 
+  FamilyProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.id,
+  }) : super.internal();
+
   final String id;
+
+  @override
+  Override overrideWith(
+    int Function(FamilyRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: FamilyProvider._internal(
+        (ref) => create(ref as FamilyRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        id: id,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeProviderElement<int> createElement() {
+    return _FamilyProviderElement(this);
+  }
 
   @override
   bool operator ==(Object other) {
@@ -108,5 +140,18 @@ class FamilyProvider extends AutoDisposeProvider<int> {
     return _SystemHash.finish(hash);
   }
 }
+
+mixin FamilyRef on AutoDisposeProviderRef<int> {
+  /// The parameter `id` of this provider.
+  String get id;
+}
+
+class _FamilyProviderElement extends AutoDisposeProviderElement<int>
+    with FamilyRef {
+  _FamilyProviderElement(super.provider);
+
+  @override
+  String get id => (origin as FamilyProvider).id;
+}
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

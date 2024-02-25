@@ -12,7 +12,7 @@ part of 'fish.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Fish {
@@ -68,18 +68,20 @@ class _$FishCopyWithImpl<$Res, $Val extends Fish>
 }
 
 /// @nodoc
-abstract class _$$_FishCopyWith<$Res> implements $FishCopyWith<$Res> {
-  factory _$$_FishCopyWith(_$_Fish value, $Res Function(_$_Fish) then) =
-      __$$_FishCopyWithImpl<$Res>;
+abstract class _$$FishImplCopyWith<$Res> implements $FishCopyWith<$Res> {
+  factory _$$FishImplCopyWith(
+          _$FishImpl value, $Res Function(_$FishImpl) then) =
+      __$$FishImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, int size, int price});
 }
 
 /// @nodoc
-class __$$_FishCopyWithImpl<$Res> extends _$FishCopyWithImpl<$Res, _$_Fish>
-    implements _$$_FishCopyWith<$Res> {
-  __$$_FishCopyWithImpl(_$_Fish _value, $Res Function(_$_Fish) _then)
+class __$$FishImplCopyWithImpl<$Res>
+    extends _$FishCopyWithImpl<$Res, _$FishImpl>
+    implements _$$FishImplCopyWith<$Res> {
+  __$$FishImplCopyWithImpl(_$FishImpl _value, $Res Function(_$FishImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -89,7 +91,7 @@ class __$$_FishCopyWithImpl<$Res> extends _$FishCopyWithImpl<$Res, _$_Fish>
     Object? size = null,
     Object? price = null,
   }) {
-    return _then(_$_Fish(
+    return _then(_$FishImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -108,8 +110,9 @@ class __$$_FishCopyWithImpl<$Res> extends _$FishCopyWithImpl<$Res, _$_Fish>
 
 /// @nodoc
 
-class _$_Fish implements _Fish {
-  const _$_Fish({required this.name, required this.size, required this.price});
+class _$FishImpl implements _Fish {
+  const _$FishImpl(
+      {required this.name, required this.size, required this.price});
 
 // 名前
   @override
@@ -127,10 +130,10 @@ class _$_Fish implements _Fish {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Fish &&
+            other is _$FishImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.size, size) || other.size == size) &&
             (identical(other.price, price) || other.price == price));
@@ -142,15 +145,15 @@ class _$_Fish implements _Fish {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FishCopyWith<_$_Fish> get copyWith =>
-      __$$_FishCopyWithImpl<_$_Fish>(this, _$identity);
+  _$$FishImplCopyWith<_$FishImpl> get copyWith =>
+      __$$FishImplCopyWithImpl<_$FishImpl>(this, _$identity);
 }
 
 abstract class _Fish implements Fish {
   const factory _Fish(
       {required final String name,
       required final int size,
-      required final int price}) = _$_Fish;
+      required final int price}) = _$FishImpl;
 
   @override // 名前
   String get name;
@@ -160,5 +163,6 @@ abstract class _Fish implements Fish {
   int get price;
   @override
   @JsonKey(ignore: true)
-  _$$_FishCopyWith<_$_Fish> get copyWith => throw _privateConstructorUsedError;
+  _$$FishImplCopyWith<_$FishImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
