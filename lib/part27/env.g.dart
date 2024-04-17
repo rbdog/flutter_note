@@ -10,27 +10,27 @@ part of 'env.dart';
 // ignore_for_file: type=lint
 final class _Env {
   static const List<int> _enviedkeypass1 = <int>[
-    2813954895,
-    3549368950,
-    2357921449,
-    3699329562,
-    722940916,
-    1482544900,
-    2136955841,
-    3732631575,
-    3145996070,
+    1517302259,
+    3572232107,
+    598222007,
+    2963791847,
+    235416927,
+    1988425132,
+    1676327021,
+    1258625693,
+    3832015680,
   ];
 
   static const List<int> _envieddatapass1 = <int>[
-    2813967278,
-    3549373138,
-    2357933590,
-    3699342057,
-    722928434,
-    1482549152,
-    2136959858,
-    3732619485,
-    3146000341,
+    1517289746,
+    3572227855,
+    598217736,
+    2963795732,
+    235412889,
+    1988412680,
+    1676314846,
+    1258629719,
+    3832011699,
   ];
 
   static final String pass1 = String.fromCharCodes(List<int>.generate(
@@ -40,19 +40,19 @@ final class _Env {
   ).map((int i) => _envieddatapass1[i] ^ _enviedkeypass1[i]));
 
   static const List<int> _enviedkeypass2 = <int>[
-    3908313698,
-    4252756932,
-    2439122720,
-    3604398370,
-    3992142253,
+    1801378433,
+    2313162529,
+    1881651599,
+    3196581489,
+    4020286852,
   ];
 
   static const List<int> _envieddatapass2 = <int>[
-    3908309645,
-    4252752695,
-    2439135220,
-    3604410846,
-    3992154388,
+    1801382510,
+    2313174994,
+    1881639259,
+    3196569229,
+    4020274493,
   ];
 
   static final String pass2 = String.fromCharCodes(List<int>.generate(
