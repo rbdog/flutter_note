@@ -1,4 +1,4 @@
-import 'package:banana/qa/others/todo_example2/custom_checkbok.dart';
+import 'package:banana/qa/others/todo_example2/custom_checkbox.dart';
 import 'package:banana/qa/others/todo_example2/todos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
