@@ -1,15 +1,15 @@
-import 'package:banana/qa/others/todo_example2/custom_checkbox.dart';
-import 'package:banana/qa/others/todo_example2/todos_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /* 自分のアプリ名によって変わるコード */
 // import 'package:simple_memo/application/state/checked_ids.dart';
 // import 'package:simple_memo/presentation/theme/colors.dart';
+// import 'package:simple_memo/.../.../todos_provider.dart';
 
 /* ルビーDogはこっち */
 import 'package:banana/qa/others/todo_example2/checked_ids.dart';
 import 'package:banana/qa/others/todo_example2/colors.dart';
+import 'package:banana/qa/others/todo_example2/todos_provider.dart';
 
 class CheckBox extends ConsumerWidget {
   const CheckBox({super.key});
@@ -32,7 +32,7 @@ class CheckBox extends ConsumerWidget {
       children: [
         // Todoモデルの数だけ繰り返す
         for (final model in models)
-          CustomCheckbox(
+          CheckboxListTile(
             activeColor: BrandColor.darkGrey,
             onChanged: (check) => onChangedCheckbox(model.id),
             value: checkedIds.contains(model.id),
