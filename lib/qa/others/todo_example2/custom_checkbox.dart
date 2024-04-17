@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// カスタマイズしたチェックボックス
 class CustomCheckbox extends StatelessWidget {
   const CustomCheckbox({
     super.key,
