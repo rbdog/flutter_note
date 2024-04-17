@@ -6,6 +6,7 @@ class CustomCheckbox extends StatelessWidget {
     this.activeColor = Colors.blue,
     this.padding = const EdgeInsets.all(8),
     this.onTapTitle,
+    this.onLongPressTitle,
     required this.title,
     required this.value,
     required this.onChanged,
@@ -17,11 +18,13 @@ class CustomCheckbox extends StatelessWidget {
   final bool value;
   final ValueChanged<bool> onChanged;
   final VoidCallback? onTapTitle;
+  final VoidCallback? onLongPressTitle;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTapTitle,
+      onLongPress: onLongPressTitle,
       child: Padding(
         padding: padding,
         child: Row(
