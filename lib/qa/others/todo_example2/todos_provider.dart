@@ -13,6 +13,14 @@ class TodoModelsNotifier extends _$TodoModelsNotifier {
     ];
   }
 
+  // 新しい ToDo を追加する
+  void addNewTodo() {
+    final newModels = List.of(state);
+    const newModel = TodoModel(id: 'D', memo: 'たちつてと');
+    newModels.add(newModel);
+    state = newModels;
+  }
+
   // メモを編集する
   void updateMemo(String id, String memo) {
     final newModel = TodoModel(id: id, memo: memo);

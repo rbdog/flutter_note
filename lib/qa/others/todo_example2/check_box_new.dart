@@ -1,3 +1,4 @@
+import 'package:banana/qa/others/todo_example2/add_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -43,6 +44,7 @@ class CheckBox extends ConsumerWidget {
 
     return Scaffold(
       body: col,
+      floatingActionButton: const AddButton(),
     );
   }
 }
