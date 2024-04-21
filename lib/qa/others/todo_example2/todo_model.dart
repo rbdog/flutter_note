@@ -3,6 +3,7 @@ class TodoModel {
   const TodoModel({
     required this.id,
     required this.memo,
+    required this.isChecked,
   });
 
   /// ID ('A'とか'B'とか他と被らないもの)
@@ -10,4 +11,7 @@ class TodoModel {
 
   /// メモ
   final String memo;
+
+  /// チェックされているかどうか (true | false)
+  final bool isChecked;
 }
