@@ -15,8 +15,10 @@ class CheckBox extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    /// Todoモデルたち
-    final models = ref.watch(todoModelsNotifierProvider);
+    /// 全てのTodoモデルたち
+    final allModels = ref.watch(todoModelsNotifierProvider);
+    // チェックが入っていないToDoモデルたち
+    final models = allModels.where((it) => !(it.isChecked));
 
     void onChangedCheckbox(String id) {
       // ノティファイヤーを使って状態を変える
