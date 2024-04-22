@@ -30,9 +30,6 @@ class CustomCheckbox extends StatelessWidget {
         padding: padding,
         child: Row(
           children: [
-            Expanded(
-              child: title,
-            ),
             InkWell(
               onTap: () => onChanged(!value),
               child: Checkbox(
@@ -42,6 +39,9 @@ class CustomCheckbox extends StatelessWidget {
                   onChanged(newValue!);
                 },
               ),
+            ),
+            Expanded(
+              child: title,
             ),
           ],
         ),
