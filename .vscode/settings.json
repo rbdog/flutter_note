@@ -7,10 +7,9 @@
   // フォーマット・保存
   "editor.formatOnSave": true,
   "[dart]": {
-    "editor.rulers": [
-      0
-    ]
+    "editor.rulers": [0]
   },
+  "cSpell.words": ["arkit", "firebaserc", "firestore", "liveroom", "Noto"]
   // "files.exclude": {
   //   "**/.dart_tool": true,
   //   "**/build": true,
@@ -23,7 +22,6 @@
   //   "**/.classpath": true,
   //   "**/.project": true,
   //   "**/.settings": true,
-  //   "**/.factorypath": true,
   //   "**/**.freezed.dart": false,
   //   "**/**.g.dart": false,
   //   "**/generated_plugin_registrant.dart": true,
