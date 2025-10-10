@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 
 // 漫画のような影をつける
 class ToonShadow extends StatelessWidget {
-  const ToonShadow({
-    super.key,
-    this.offset = 10,
-    required this.child,
-  });
+  const ToonShadow({super.key, this.offset = 10, required this.child});
 
   /// 影の位置
   final double offset;
@@ -27,7 +23,7 @@ class ToonShadow extends StatelessWidget {
           child: Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.1),
+              color: Colors.black.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(5),
             ),
           ),

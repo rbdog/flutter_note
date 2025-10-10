@@ -16,9 +16,9 @@ void main() {
 class DragScroller extends MaterialScrollBehavior {
   @override
   Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+  };
 }
 
 class HomePage extends ConsumerWidget {
@@ -47,9 +47,10 @@ class HomePage extends ConsumerWidget {
               boxShadow: [
                 BoxShadow(
                   offset: const Offset(0, -3),
-                  color: Colors.black.withOpacity(0.1),
+                  // MEMO: withOpacity は古くなったので withValues へ変更しました
+                  color: Colors.black.withValues(alpha: 0.1),
                   blurRadius: 5,
-                )
+                ),
               ],
               color: Colors.white,
             ),

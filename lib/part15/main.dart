@@ -53,30 +53,22 @@ class Home extends ConsumerWidget {
     final col = Column(
       children: [
         // ラジオボタンたち
-
-        RadioListTile(
+        RadioGroup(
           groupValue: radioId,
           onChanged: onChangedRadio,
-          value: 'A',
-          title: const Text('ラジオボタンA'),
-        ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              RadioListTile(value: 'A', title: const Text('ラジオボタンA')),
 
-        RadioListTile(
-          groupValue: radioId,
-          onChanged: onChangedRadio,
-          value: 'B',
-          title: const Text('ラジオボタンB'),
-        ),
+              RadioListTile(value: 'B', title: const Text('ラジオボタンB')),
 
-        RadioListTile(
-          groupValue: radioId,
-          onChanged: onChangedRadio,
-          value: 'C',
-          title: const Text('ラジオボタンC'),
+              RadioListTile(value: 'C', title: const Text('ラジオボタンC')),
+            ],
+          ),
         ),
 
         // チェックボックス たち
-
         CheckboxListTile(
           onChanged: (check) => onChangedCheckbox('A'),
           value: checkedIds.contains('A'),
@@ -96,7 +88,6 @@ class Home extends ConsumerWidget {
         ),
 
         // OK ボタン
-
         ElevatedButton(
           onPressed: () {
             // 選ばれたラジオボタンIDを確認する
@@ -109,8 +100,6 @@ class Home extends ConsumerWidget {
       ],
     );
 
-    return Scaffold(
-      body: col,
-    );
+    return Scaffold(body: col);
   }
 }

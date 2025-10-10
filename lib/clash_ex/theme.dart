@@ -14,8 +14,9 @@ class ExColor {
   static final tabBar = Colors.orange[300];
   static final dividerLight = Colors.orange[200];
   static final dividerDark = Colors.orange[400];
-  static final highlightTop = Colors.white.withOpacity(0.8);
-  static final highlightBottom = Colors.white.withOpacity(0.4);
+  // MEMO: withOpacity は古くなったので withValues へ変更しました
+  static final highlightTop = Colors.white.withValues(alpha: 0.8);
+  static final highlightBottom = Colors.white.withValues(alpha: 0.4);
 }
 
 class ExFont {

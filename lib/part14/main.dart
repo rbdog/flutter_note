@@ -36,7 +36,8 @@ class Home extends ConsumerWidget {
         ref.read(isOnProvider.notifier).state = isOn;
       },
       // 色を変える
-      activeColor: Colors.blue,
+      // MEMO: activeColor は古くなったので activeThumbColor へ変更しました
+      activeThumbColor: Colors.blue,
       activeTrackColor: Colors.green,
       inactiveThumbColor: Colors.black,
       inactiveTrackColor: Colors.grey,
@@ -67,22 +68,13 @@ class Home extends ConsumerWidget {
       inactiveColor: Colors.black12,
     );
 
-    final con = Container(
-      width: value * 300,
-      height: 20,
-      color: Colors.blue,
-    );
+    final con = Container(width: value * 300, height: 20, color: Colors.blue);
 
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            toggleSwitch,
-            slider,
-            rangeSlider,
-            con,
-          ],
+          children: [toggleSwitch, slider, rangeSlider, con],
         ),
       ),
     );
