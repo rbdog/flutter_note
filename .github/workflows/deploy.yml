@@ -32,14 +32,12 @@ jobs:
         run: flutter build web --base-href=/
 
       - name: Authenticate to Google Cloud
-        id: auth
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: projects/1042076784714/locations/global/workloadIdentityPools/github-actions/providers/github
           service_account: github-actions@rubydog-sites.iam.gserviceaccount.com
-          token_format: access_token
 
       - name: Deploy to Firebase Hosting
-        run: npx firebase-tools deploy --only hosting:user_site --project=rubydog-sites --non-interactive
-        env:
-          FIREBASE_TOKEN: ${{ steps.auth.outputs.access_token }}
+        run: |
+          export FIREBASE_TOKEN=$(gcloud auth print-access-token)
+          npx firebase-tools deploy --only hosting:user_site --project=rubydog-sites --non-interactive
