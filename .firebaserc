@@ -12,6 +12,13 @@
           "rubydog"
         ]
       }
+    },
+    "rubydog-sites": {
+      "hosting": {
+        "user_site": [
+          "rubydogjp-flutter-note"
+        ]
+      }
     }
   },
   "etags": {}
