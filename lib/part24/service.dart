@@ -18,22 +18,24 @@ class AuthService {
     ];
 
     // Googleでサインイン の画面へ飛ばす
-    final request = GoogleSignIn(clientId: clientId, scopes: scopes);
-    final response = await request.signIn();
+    // MEMO: google_sign_in 7 では GoogleSignIn() の生成は廃止され、GoogleSignIn.instance を initialize() してから authenticate() を呼びます
+    final google = GoogleSignIn.instance;
+    await google.initialize(clientId: clientId);
+    final account = await google.authenticate(scopeHint: scopes);
 
-    // 受け取ったデータの中からアクセストークンを取り出す
-    final authn = await response?.authentication;
-    final accessToken = authn?.accessToken;
-
-    // アクセストークンが null だったら中止
-    if (accessToken == null) {
-      return;
-    }
+    // 受け取ったデータの中からトークンを取り出す
+    // MEMO: google_sign_in 7 では authentication からは idToken のみ取得でき、accessToken は authorizationClient.authorizeScopes() から取得します
+    final idToken = account.authentication.idToken;
+    final authorization = await account.authorizationClient.authorizeScopes(
+      scopes,
+    );
+    final accessToken = authorization.accessToken;
 
     /* Firebase と通信 */
 
-    // Firebaseへアクセストークンを送る
+    // Firebaseへトークンを送る
     final oAuthCredential = GoogleAuthProvider.credential(
+      idToken: idToken,
       accessToken: accessToken,
     );
     await FirebaseAuth.instance.signInWithCredential(

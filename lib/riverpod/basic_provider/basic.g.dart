@@ -6,19 +6,45 @@ part of 'basic.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$basicHash() => r'c2aec842b120cb9c3f79c5d64d86fe342225ce10';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [basic].
 @ProviderFor(basic)
-final basicProvider = AutoDisposeProvider<int>.internal(
-  basic,
-  name: r'basicProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$basicHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final basicProvider = BasicProvider._();
 
-typedef BasicRef = AutoDisposeProviderRef<int>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class BasicProvider extends $FunctionalProvider<int, int, int>
+    with $Provider<int> {
+  BasicProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'basicProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$basicHash();
+
+  @$internal
+  @override
+  $ProviderElement<int> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  int create(Ref ref) {
+    return basic(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(int value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<int>(value),
+    );
+  }
+}
+
+String _$basicHash() => r'2c033cc9bcebd67e388ad6d653ef4960921acba1';

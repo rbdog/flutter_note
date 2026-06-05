@@ -1,7 +1,8 @@
 // riverpod で使うプロバイダーを書いておくファイル
 
 import 'package:banana/qa/others/todo_example/todo_model.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+// MEMO: StateNotifierProvider は Riverpod 3 で legacy 扱いになったため legacy.dart から import します
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:banana/qa/others/todo_example/todo_view_model.dart';
 
 /// ビューモデルを入れておくプロバイダー

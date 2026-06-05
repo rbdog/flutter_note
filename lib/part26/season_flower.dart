@@ -9,7 +9,7 @@ class SeasonFlower extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     /// 選択中の季節
-    final season = ref.watch(seasonNotifierProvider);
+    final season = ref.watch(seasonProvider);
 
     // 画像
     return Image.asset(

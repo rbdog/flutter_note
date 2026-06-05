@@ -2,7 +2,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'family.g.dart';
 
 @riverpod
-int family(FamilyRef ref, String id) {
+int family(Ref ref, String id) {
   if (id == '日本') {
     return 3;
   }

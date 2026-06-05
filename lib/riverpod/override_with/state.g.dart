@@ -6,19 +6,45 @@ part of 'state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appleHash() => r'6e4f7de9ec95863045593403521e4d0882cc2fbc';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [apple].
 @ProviderFor(apple)
-final appleProvider = AutoDisposeProvider<String>.internal(
-  apple,
-  name: r'appleProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$appleHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final appleProvider = AppleProvider._();
 
-typedef AppleRef = AutoDisposeProviderRef<String>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class AppleProvider extends $FunctionalProvider<String, String, String>
+    with $Provider<String> {
+  AppleProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appleProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appleHash();
+
+  @$internal
+  @override
+  $ProviderElement<String> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  String create(Ref ref) {
+    return apple(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(String value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String>(value),
+    );
+  }
+}
+
+String _$appleHash() => r'3d3bcf15b684c0b73ac5cf26445ba069ae4ef27f';

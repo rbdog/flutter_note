@@ -6,19 +6,45 @@ part of 'logic.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$logicHash() => r'0e1e63667df130237bee82d55de9cc7f7b22f72c';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [logic].
 @ProviderFor(logic)
-final logicProvider = AutoDisposeProvider<String>.internal(
-  logic,
-  name: r'logicProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$logicHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final logicProvider = LogicProvider._();
 
-typedef LogicRef = AutoDisposeProviderRef<String>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class LogicProvider extends $FunctionalProvider<String, String, String>
+    with $Provider<String> {
+  LogicProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'logicProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$logicHash();
+
+  @$internal
+  @override
+  $ProviderElement<String> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  String create(Ref ref) {
+    return logic(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(String value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String>(value),
+    );
+  }
+}
+
+String _$logicHash() => r'ace08ea6c3d9155625a9715569ef45d60e308602';

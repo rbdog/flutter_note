@@ -8,11 +8,11 @@ class MyWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 四国の状態を watch
-    final shikoku = ref.watch(shikokuNotifierProvider);
+    final shikoku = ref.watch(shikokuProvider);
 
     // 香川だけを listen (select)
     ref.listen(
-      shikokuNotifierProvider.select(
+      shikokuProvider.select(
         (shikoku) => shikoku.kagawa,
       ),
       (oldState, newState) {
@@ -42,28 +42,28 @@ class MyWidget extends ConsumerWidget {
       children: [
         ElevatedButton(
           onPressed: () {
-            final notifier = ref.read(shikokuNotifierProvider.notifier);
+            final notifier = ref.read(shikokuProvider.notifier);
             notifier.updateKagawa();
           },
           child: const Text('香川'),
         ),
         ElevatedButton(
           onPressed: () {
-            final notifier = ref.read(shikokuNotifierProvider.notifier);
+            final notifier = ref.read(shikokuProvider.notifier);
             notifier.updateTokushima();
           },
           child: const Text('徳島'),
         ),
         ElevatedButton(
           onPressed: () {
-            final notifier = ref.read(shikokuNotifierProvider.notifier);
+            final notifier = ref.read(shikokuProvider.notifier);
             notifier.updateKochi();
           },
           child: const Text('高知'),
         ),
         ElevatedButton(
           onPressed: () {
-            final notifier = ref.read(shikokuNotifierProvider.notifier);
+            final notifier = ref.read(shikokuProvider.notifier);
             notifier.updateEhime();
           },
           child: const Text('愛媛'),

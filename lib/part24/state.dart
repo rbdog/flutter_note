@@ -9,7 +9,7 @@ part 'state.g.dart';
 /// FirebaseのユーザーをAsyncValue型で管理するプロバイダー
 ///
 @riverpod
-Stream<User?> userChanges(UserChangesRef ref) {
+Stream<User?> userChanges(Ref ref) {
   // Firebaseからユーザーの変化を教えてもらう
   return FirebaseAuth.instance.authStateChanges();
 }
@@ -18,11 +18,11 @@ Stream<User?> userChanges(UserChangesRef ref) {
 /// ユーザー
 ///
 @riverpod
-User? user(UserRef ref) {
+User? user(Ref ref) {
   final userChanges = ref.watch(userChangesProvider);
   return userChanges.when(
     loading: () => null,
-    error: (_, __) => null,
+    error: (_, _) => null,
     data: (d) => d,
   );
 }
@@ -31,7 +31,7 @@ User? user(UserRef ref) {
 /// サインイン中かどうか
 ///
 @riverpod
-bool signedIn(SignedInRef ref) {
+bool signedIn(Ref ref) {
   final user = ref.watch(userProvider);
   return user != null;
 }
@@ -42,7 +42,7 @@ bool signedIn(SignedInRef ref) {
 /// ユーザーID
 ///
 @riverpod
-String userId(UserIdRef ref) {
+String userId(Ref ref) {
   throw 'スコープ内の画面でしか使えません';
 }
 
@@ -50,10 +50,7 @@ String userId(UserIdRef ref) {
 /// ユーザーIDを使えるスコープ    >> router/user_id_scope.dart
 /// ---------------------------------------------------------
 class UserIdScope extends ConsumerWidget {
-  const UserIdScope({
-    super.key,
-    required this.child,
-  });
+  const UserIdScope({super.key, required this.child});
 
   final Widget child;
 
@@ -68,9 +65,7 @@ class UserIdScope extends ConsumerWidget {
       // ユーザーが見つかったとき
       return ProviderScope(
         // ユーザーIDを上書き
-        overrides: [
-          userIdProvider.overrideWithValue(user.uid),
-        ],
+        overrides: [userIdProvider.overrideWithValue(user.uid)],
         child: child,
       );
     }

@@ -47,7 +47,7 @@ class MyLabel extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 保存されている文字を watch
-    final text = ref.watch(textNotifierProvider);
+    final text = ref.watch(textProvider);
     return Text('保存されている文字は: $text');
   }
 }
@@ -100,7 +100,7 @@ class MyButton extends ConsumerWidget {
         // 1. コントローラーから今入力されている文字を教えてもらう
         final text = controller.text;
         // 2. ノティファイヤーを read する
-        final notifier = ref.read(textNotifierProvider.notifier);
+        final notifier = ref.read(textProvider.notifier);
         // 3. 文字を保存する
         notifier.save(text);
       },

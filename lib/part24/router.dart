@@ -20,24 +20,18 @@ class PagePath {
 /// GoRouter    >> router/router.dart
 /// ---------------------------------------------------------
 @riverpod
-GoRouter router(RouterRef ref) {
+GoRouter router(Ref ref) {
   // パスと画面の組み合わせ
   final routes = [
     // サインイン画面
-    GoRoute(
-      path: PagePath.signIn,
-      builder: (_, __) => const SignInPage(),
-    ),
+    GoRoute(path: PagePath.signIn, builder: (_, _) => const SignInPage()),
 
     // ユーザーIDスコープで囲むためのシェル
     ShellRoute(
-      builder: (_, __, child) => UserIdScope(child: child),
+      builder: (_, _, child) => UserIdScope(child: child),
       routes: [
         // ホーム画面
-        GoRoute(
-          path: PagePath.home,
-          builder: (_, __) => const HomePage(),
-        ),
+        GoRoute(path: PagePath.home, builder: (_, _) => const HomePage()),
         // xxx画面
         // yyy画面
         // zzz画面

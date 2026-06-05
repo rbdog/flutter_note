@@ -6,22 +6,58 @@ part of 'todos_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(TodoModelsNotifier)
+final todoModelsProvider = TodoModelsNotifierProvider._();
+
+final class TodoModelsNotifierProvider
+    extends $NotifierProvider<TodoModelsNotifier, List<TodoModel>> {
+  TodoModelsNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'todoModelsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$todoModelsNotifierHash();
+
+  @$internal
+  @override
+  TodoModelsNotifier create() => TodoModelsNotifier();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(List<TodoModel> value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<List<TodoModel>>(value),
+    );
+  }
+}
+
 String _$todoModelsNotifierHash() =>
     r'42514d97db9d405d31e7c62b98bbd6cf440f7747';
 
-/// See also [TodoModelsNotifier].
-@ProviderFor(TodoModelsNotifier)
-final todoModelsNotifierProvider =
-    AutoDisposeNotifierProvider<TodoModelsNotifier, List<TodoModel>>.internal(
-  TodoModelsNotifier.new,
-  name: r'todoModelsNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$todoModelsNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$TodoModelsNotifier = AutoDisposeNotifier<List<TodoModel>>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+abstract class _$TodoModelsNotifier extends $Notifier<List<TodoModel>> {
+  List<TodoModel> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<List<TodoModel>, List<TodoModel>>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<List<TodoModel>, List<TodoModel>>,
+              List<TodoModel>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

@@ -14,7 +14,7 @@ class AddButton extends ConsumerWidget {
       // ボタンを押したとき
       onPressed: () {
         // ノティファイアーを使ってデータを変える
-        final notifier = ref.read(todoModelsNotifierProvider.notifier);
+        final notifier = ref.read(todoModelsProvider.notifier);
         // 新しいTodoを追加する
         notifier.addNewTodo();
       },

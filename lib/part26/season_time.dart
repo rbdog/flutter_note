@@ -9,7 +9,7 @@ class SeasonTime extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 選択中の季節
-    final season = ref.watch(seasonNotifierProvider);
+    final season = ref.watch(seasonProvider);
 
     // テキスト
     return Text(

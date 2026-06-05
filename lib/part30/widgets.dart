@@ -9,7 +9,7 @@ class DrinkText extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 状態管理からドリンクをGET
-    final drink = ref.watch(drinkNotifierProvider);
+    final drink = ref.watch(drinkProvider);
 
     // AsyncValue で分ける
     return switch (drink) {
@@ -34,7 +34,7 @@ class DrinkTextField extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 状態管理からドリンクをGET
-    final drink = ref.watch(drinkNotifierProvider);
+    final drink = ref.watch(drinkProvider);
 
     return switch (drink) {
       AsyncData(:final value) =>
@@ -62,7 +62,7 @@ class DrinkSaveButton extends ConsumerWidget {
         // 押されたときにコントローラーから入力された文字をGET
         final drink = controller.text;
         // ノティファイアーで状態を変更
-        final notifier = ref.read(drinkNotifierProvider.notifier);
+        final notifier = ref.read(drinkProvider.notifier);
         notifier.updateDrink(drink);
       },
       child: const Text('保存する'),

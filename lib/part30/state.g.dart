@@ -6,21 +6,49 @@ part of 'state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(DrinkNotifier)
+final drinkProvider = DrinkNotifierProvider._();
+
+final class DrinkNotifierProvider
+    extends $AsyncNotifierProvider<DrinkNotifier, String> {
+  DrinkNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'drinkProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$drinkNotifierHash();
+
+  @$internal
+  @override
+  DrinkNotifier create() => DrinkNotifier();
+}
+
 String _$drinkNotifierHash() => r'b058b43801d5aaf750fb38611665d8ff236b7462';
 
-/// See also [DrinkNotifier].
-@ProviderFor(DrinkNotifier)
-final drinkNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<DrinkNotifier, String>.internal(
-  DrinkNotifier.new,
-  name: r'drinkNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$drinkNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$DrinkNotifier = AutoDisposeAsyncNotifier<String>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+abstract class _$DrinkNotifier extends $AsyncNotifier<String> {
+  FutureOr<String> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<String>, String>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<String>, String>,
+              AsyncValue<String>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}

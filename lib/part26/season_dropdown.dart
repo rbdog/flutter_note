@@ -9,7 +9,7 @@ class SeasonDropdown extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 今の季節
-    final season = ref.watch(seasonNotifierProvider);
+    final season = ref.watch(seasonProvider);
 
     /// 選択肢たち
     const items = [
@@ -37,7 +37,7 @@ class SeasonDropdown extends ConsumerWidget {
       items: items, // すべての選択肢たち
       onChanged: (newSeason) {
         // 状態管理 --> 季節を変更
-        final notifier = ref.read(seasonNotifierProvider.notifier);
+        final notifier = ref.read(seasonProvider.notifier);
         notifier.updateSeason(newSeason!);
       },
       focusColor: Colors.transparent, // 余計な影をなくす

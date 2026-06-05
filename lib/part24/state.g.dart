@@ -6,77 +6,201 @@ part of 'state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$userChangesHash() => r'4b418a07a9bb38d37b0f5fe2676bb7f58267eaeb';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+///
+/// FirebaseのユーザーをAsyncValue型で管理するプロバイダー
+///
+
+@ProviderFor(userChanges)
+final userChangesProvider = UserChangesProvider._();
 
 ///
 /// FirebaseのユーザーをAsyncValue型で管理するプロバイダー
 ///
-///
-/// Copied from [userChanges].
-@ProviderFor(userChanges)
-final userChangesProvider = AutoDisposeStreamProvider<User?>.internal(
-  userChanges,
-  name: r'userChangesProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$userChangesHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
 
-typedef UserChangesRef = AutoDisposeStreamProviderRef<User?>;
-String _$userHash() => r'3cc9ecd667fcb1fd39e74d498ecab726c98cf46a';
+final class UserChangesProvider
+    extends $FunctionalProvider<AsyncValue<User?>, User?, Stream<User?>>
+    with $FutureModifier<User?>, $StreamProvider<User?> {
+  ///
+  /// FirebaseのユーザーをAsyncValue型で管理するプロバイダー
+  ///
+  UserChangesProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'userChangesProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$userChangesHash();
+
+  @$internal
+  @override
+  $StreamProviderElement<User?> $createElement($ProviderPointer pointer) =>
+      $StreamProviderElement(pointer);
+
+  @override
+  Stream<User?> create(Ref ref) {
+    return userChanges(ref);
+  }
+}
+
+String _$userChangesHash() => r'81b2fd28aa8f519fa0fb0fabe57d9facc43d9baf';
 
 ///
 /// ユーザー
 ///
-///
-/// Copied from [user].
-@ProviderFor(user)
-final userProvider = AutoDisposeProvider<User?>.internal(
-  user,
-  name: r'userProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$userHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
 
-typedef UserRef = AutoDisposeProviderRef<User?>;
-String _$signedInHash() => r'ad977544c865550a5f87cfb21ad0a59169bcdd7b';
+@ProviderFor(user)
+final userProvider = UserProvider._();
+
+///
+/// ユーザー
+///
+
+final class UserProvider extends $FunctionalProvider<User?, User?, User?>
+    with $Provider<User?> {
+  ///
+  /// ユーザー
+  ///
+  UserProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'userProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$userHash();
+
+  @$internal
+  @override
+  $ProviderElement<User?> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  User? create(Ref ref) {
+    return user(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(User? value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<User?>(value),
+    );
+  }
+}
+
+String _$userHash() => r'a3a444c3a1237e5a8c7be72603df1f4290a23f65';
 
 ///
 /// サインイン中かどうか
 ///
-///
-/// Copied from [signedIn].
-@ProviderFor(signedIn)
-final signedInProvider = AutoDisposeProvider<bool>.internal(
-  signedIn,
-  name: r'signedInProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$signedInHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
 
-typedef SignedInRef = AutoDisposeProviderRef<bool>;
-String _$userIdHash() => r'b04b6e432625c4a9d6c9643e7f6182a7c53ec8c2';
+@ProviderFor(signedIn)
+final signedInProvider = SignedInProvider._();
+
+///
+/// サインイン中かどうか
+///
+
+final class SignedInProvider extends $FunctionalProvider<bool, bool, bool>
+    with $Provider<bool> {
+  ///
+  /// サインイン中かどうか
+  ///
+  SignedInProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'signedInProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$signedInHash();
+
+  @$internal
+  @override
+  $ProviderElement<bool> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  bool create(Ref ref) {
+    return signedIn(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(bool value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<bool>(value),
+    );
+  }
+}
+
+String _$signedInHash() => r'582365461d843da2946a06b9e7245cfdbb50a00c';
 
 ///
 /// ユーザーID
 ///
-///
-/// Copied from [userId].
-@ProviderFor(userId)
-final userIdProvider = AutoDisposeProvider<String>.internal(
-  userId,
-  name: r'userIdProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$userIdHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
 
-typedef UserIdRef = AutoDisposeProviderRef<String>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+@ProviderFor(userId)
+final userIdProvider = UserIdProvider._();
+
+///
+/// ユーザーID
+///
+
+final class UserIdProvider extends $FunctionalProvider<String, String, String>
+    with $Provider<String> {
+  ///
+  /// ユーザーID
+  ///
+  UserIdProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'userIdProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$userIdHash();
+
+  @$internal
+  @override
+  $ProviderElement<String> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  String create(Ref ref) {
+    return userId(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(String value) {
+    return $ProviderOverride(
+      origin: this,
+      providerOverride: $SyncValueProvider<String>(value),
+    );
+  }
+}
+
+String _$userIdHash() => r'f835dc81360c05e549768b0c2c67b9697a7accd2';

@@ -33,10 +33,10 @@ class P3Notifier extends _$P3Notifier {
 // proxyProvider
 
 @riverpod
-String proxy(ProxyRef ref) {
-  final p1 = ref.watch(p1NotifierProvider);
-  final p2 = ref.watch(p2NotifierProvider);
-  final p3 = ref.watch(p3NotifierProvider);
+String proxy(Ref ref) {
+  final p1 = ref.watch(p1Provider);
+  final p2 = ref.watch(p2Provider);
+  final p3 = ref.watch(p3Provider);
 
   return p1 + p2 + p3;
 }

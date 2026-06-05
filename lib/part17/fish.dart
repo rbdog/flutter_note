@@ -4,7 +4,8 @@ part 'fish.freezed.dart';
 // たくさんのデータをまとめた魚クラス
 
 @freezed
-class Fish with _$Fish {
+// MEMO: freezed 3 では freezed クラスを abstract class にする必要があります
+abstract class Fish with _$Fish {
   const factory Fish({
     // 名前
     required String name,

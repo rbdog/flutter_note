@@ -6,152 +6,80 @@ part of 'family.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$familyHash() => r'40f446e5eaa78897719573c5773d21a442ed50d3';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-/// See also [family].
 @ProviderFor(family)
-const familyProvider = FamilyFamily();
+final familyProvider = FamilyFamily._();
 
-/// See also [family].
-class FamilyFamily extends Family<int> {
-  /// See also [family].
-  const FamilyFamily();
+final class FamilyProvider extends $FunctionalProvider<int, int, int>
+    with $Provider<int> {
+  FamilyProvider._({
+    required FamilyFamily super.from,
+    required String super.argument,
+  }) : super(
+         retry: null,
+         name: r'familyProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
-  /// See also [family].
-  FamilyProvider call(
-    String id,
-  ) {
-    return FamilyProvider(
-      id,
-    );
+  @override
+  String debugGetCreateSourceHash() => _$familyHash();
+
+  @override
+  String toString() {
+    return r'familyProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  FamilyProvider getProviderOverride(
-    covariant FamilyProvider provider,
-  ) {
-    return call(
-      provider.id,
-    );
+  $ProviderElement<int> $createElement($ProviderPointer pointer) =>
+      $ProviderElement(pointer);
+
+  @override
+  int create(Ref ref) {
+    final argument = this.argument as String;
+    return family(ref, argument);
   }
 
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'familyProvider';
-}
-
-/// See also [family].
-class FamilyProvider extends AutoDisposeProvider<int> {
-  /// See also [family].
-  FamilyProvider(
-    String id,
-  ) : this._internal(
-          (ref) => family(
-            ref as FamilyRef,
-            id,
-          ),
-          from: familyProvider,
-          name: r'familyProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$familyHash,
-          dependencies: FamilyFamily._dependencies,
-          allTransitiveDependencies: FamilyFamily._allTransitiveDependencies,
-          id: id,
-        );
-
-  FamilyProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.id,
-  }) : super.internal();
-
-  final String id;
-
-  @override
-  Override overrideWith(
-    int Function(FamilyRef provider) create,
-  ) {
-    return ProviderOverride(
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(int value) {
+    return $ProviderOverride(
       origin: this,
-      override: FamilyProvider._internal(
-        (ref) => create(ref as FamilyRef),
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        id: id,
-      ),
+      providerOverride: $SyncValueProvider<int>(value),
     );
-  }
-
-  @override
-  AutoDisposeProviderElement<int> createElement() {
-    return _FamilyProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is FamilyProvider && other.id == id;
+    return other is FamilyProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, id.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-mixin FamilyRef on AutoDisposeProviderRef<int> {
-  /// The parameter `id` of this provider.
-  String get id;
-}
+String _$familyHash() => r'554ef588027c8b822e0bfe9f5749b08763218943';
 
-class _FamilyProviderElement extends AutoDisposeProviderElement<int>
-    with FamilyRef {
-  _FamilyProviderElement(super.provider);
+final class FamilyFamily extends $Family
+    with $FunctionalFamilyOverride<int, String> {
+  FamilyFamily._()
+    : super(
+        retry: null,
+        name: r'familyProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
+
+  FamilyProvider call(String id) => FamilyProvider._(argument: id, from: this);
 
   @override
-  String get id => (origin as FamilyProvider).id;
+  String toString() => r'familyProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

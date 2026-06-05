@@ -7,7 +7,8 @@ part 'recipe.g.dart';
 
 // レベル3 料理レシピ
 @freezed
-class Recipe with _$Recipe {
+// MEMO: freezed 3 では freezed クラスを abstract class にする必要があります
+abstract class Recipe with _$Recipe {
   const factory Recipe({
     // タイトル
     required String title,

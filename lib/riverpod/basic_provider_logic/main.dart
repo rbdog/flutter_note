@@ -61,13 +61,13 @@ class Page2 extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final age = ref.watch(ageNotifierProvider);
+    final age = ref.watch(ageProvider);
 
     // ボタン
     final button = FloatingActionButton(
       onPressed: () {
         // 年齢を変更する
-        final notifier = ref.read(ageNotifierProvider.notifier);
+        final notifier = ref.read(ageProvider.notifier);
         notifier.updateState();
       },
       child: const Icon(Icons.add),

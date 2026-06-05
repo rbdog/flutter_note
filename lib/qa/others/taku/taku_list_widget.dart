@@ -9,7 +9,7 @@ class TakuListWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 卓モデルたち(AsyncValue)
-    final asyncTakuList = ref.watch(takuModelsNotifierProvider);
+    final asyncTakuList = ref.watch(takuModelsProvider);
 
     if (asyncTakuList.hasError) {
       return const Text('エラーのときに出すWidget');

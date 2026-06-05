@@ -85,13 +85,13 @@ class _JudgeButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final personChar = ref.watch(personCharNotifierProvider);
+    final personChar = ref.watch(personCharProvider);
     if (personChar.isLoading) {
       return const CircularProgressIndicator();
     } else {
       return ElevatedButton(
         onPressed: () async {
-          final notifier = ref.read(personCharNotifierProvider.notifier);
+          final notifier = ref.read(personCharProvider.notifier);
           await notifier.judge(controller.text);
         },
         child: const Text('判定する'),
@@ -106,7 +106,7 @@ class _PersonChar extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final personChar = ref.watch(personCharNotifierProvider);
+    final personChar = ref.watch(personCharProvider);
 
     if (personChar.value == null) {
       return const Icon(

@@ -4,6 +4,6 @@ part 'state.g.dart';
 // 本物
 
 @riverpod
-String apple(AppleRef ref) {
+String apple(Ref ref) {
   return 'りんご';
 }

@@ -10,7 +10,7 @@ class MyWidget2 extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // S2 watch
-    final s2 = ref.watch(s2NotifierProvider);
+    final s2 = ref.watch(s2Provider);
 
     // ListView
     final listView = ListView.builder(
@@ -26,7 +26,7 @@ class MyWidget2 extends ConsumerWidget {
     final button = FloatingActionButton(
       onPressed: () {
         // S2 Notifier
-        final notifier = ref.read(s2NotifierProvider.notifier);
+        final notifier = ref.read(s2Provider.notifier);
         // データを変更
         notifier.updateState();
       },

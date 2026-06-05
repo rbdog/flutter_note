@@ -13,7 +13,7 @@ class MyWidget extends ConsumerWidget {
     final button = FloatingActionButton(
       onPressed: () {
         // P1 を 変更する
-        final notifier = ref.read(p1NotifierProvider.notifier);
+        final notifier = ref.read(p1Provider.notifier);
         notifier.updateState();
       },
       child: const Icon(Icons.refresh),

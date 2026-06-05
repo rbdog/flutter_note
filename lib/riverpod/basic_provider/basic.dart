@@ -4,6 +4,6 @@ part 'basic.g.dart';
 // basicProvider
 
 @riverpod
-int basic(BasicRef ref) {
+int basic(Ref ref) {
   return 123;
 }

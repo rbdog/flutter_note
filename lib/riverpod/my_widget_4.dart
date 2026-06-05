@@ -10,7 +10,7 @@ class MyWidget4 extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // S4 watch
-    final s4 = ref.watch(s4NotifierProvider);
+    final s4 = ref.watch(s4Provider);
     // S3 AsyncValue
     final s4Text = s4.when(
       loading: () => const Text('準備中'),
@@ -21,7 +21,7 @@ class MyWidget4 extends ConsumerWidget {
     final s4Button = ElevatedButton(
       onPressed: () {
         // S4 ノティファイアを呼ぶ
-        final notifier = ref.read(s4NotifierProvider.notifier);
+        final notifier = ref.read(s4Provider.notifier);
         // S4 データを変更
         notifier.updateState();
       },

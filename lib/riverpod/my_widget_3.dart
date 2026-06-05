@@ -10,7 +10,7 @@ class MyWidget3 extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // S3 watch
-    final s3 = ref.watch(s3NotifierProvider);
+    final s3 = ref.watch(s3Provider);
     // S3 AsyncValue
     final s3Text = s3.when(
       loading: () => const Text('準備中...'),
@@ -21,7 +21,7 @@ class MyWidget3 extends ConsumerWidget {
     final s3Button = ElevatedButton(
       onPressed: () {
         // S3 ノティファイアを呼ぶ
-        final notifier = ref.read(s3NotifierProvider.notifier);
+        final notifier = ref.read(s3Provider.notifier);
         // S3 データを変更
         notifier.updateState();
       },

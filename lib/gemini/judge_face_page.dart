@@ -55,7 +55,9 @@ class _PickButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ElevatedButton(
       onPressed: () async {
-        final result = await FilePicker.platform.pickFiles();
+        // MEMO: file_picker 11 では FilePicker.platform が廃止され FilePicker.pickFiles() を直接呼びます
+
+        final result = await FilePicker.pickFiles();
         if (result == null) return;
         if (result.files.single.extension != 'png') {
           debugPrint('画像形式がpngのものを選択してください');
@@ -80,14 +82,14 @@ class _JudgeButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final faceAge = ref.watch(faceAgeNotifierProvider);
+    final faceAge = ref.watch(faceAgeProvider);
     if (faceAge.isLoading) {
       return const CircularProgressIndicator();
     } else {
       return ElevatedButton(
         onPressed: () async {
           if (image == null) return;
-          final notifier = ref.read(faceAgeNotifierProvider.notifier);
+          final notifier = ref.read(faceAgeProvider.notifier);
           await notifier.judge(image!);
         },
         child: const Text('判定する'),
@@ -102,7 +104,7 @@ class _FaceAge extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final faceAge = ref.watch(faceAgeNotifierProvider);
+    final faceAge = ref.watch(faceAgeProvider);
 
     if (faceAge.value == null) {
       return const Icon(

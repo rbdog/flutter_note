@@ -7,7 +7,8 @@ part 'pack.g.dart';
 
 // レベル2 野菜パック
 @freezed
-class Pack with _$Pack {
+// MEMO: freezed 3 では freezed クラスを abstract class にする必要があります
+abstract class Pack with _$Pack {
   const factory Pack({
     // 大きさ
     required String size,

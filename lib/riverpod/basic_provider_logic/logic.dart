@@ -4,9 +4,9 @@ import 'package:banana/riverpod/basic_provider_logic/state.dart';
 part 'logic.g.dart';
 
 @riverpod
-String logic(LogicRef ref) {
+String logic(Ref ref) {
   // 年齢
-  final age = ref.watch(ageNotifierProvider);
+  final age = ref.watch(ageProvider);
 
   debugPrint('これからお酒が飲めるかどうかチェックします');
 

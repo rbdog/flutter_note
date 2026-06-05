@@ -4,7 +4,8 @@ part 'vegetable.g.dart';
 
 // レベル1 ただの野菜のデータ
 @freezed
-class Vegetable with _$Vegetable {
+// MEMO: freezed 3 では freezed クラスを abstract class にする必要があります
+abstract class Vegetable with _$Vegetable {
   const factory Vegetable({
     // 名前
     required String name,

@@ -18,10 +18,7 @@ main() {
 
 // アプリ
 class MyApp extends HookWidget {
-  const MyApp({
-    super.key,
-    required this.pages,
-  });
+  const MyApp({super.key, required this.pages});
 
   final List<Widget> pages;
 
@@ -31,14 +28,8 @@ class MyApp extends HookWidget {
 
     // タブのアイテムたち
     const items = [
-      BottomNavigationBarItem(
-        icon: Icon(Icons.circle),
-        label: 'A',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.circle),
-        label: 'B',
-      ),
+      BottomNavigationBarItem(icon: Icon(Icons.circle), label: 'A'),
+      BottomNavigationBarItem(icon: Icon(Icons.circle), label: 'B'),
     ];
 
     // タブバー
@@ -54,10 +45,7 @@ class MyApp extends HookWidget {
     return MaterialApp(
       home: Scaffold(
         // プロバイダースコープがWidgetTreeから消えないようにするIndexedStack
-        body: IndexedStack(
-          index: index.value,
-          children: pages,
-        ),
+        body: IndexedStack(index: index.value, children: pages),
         bottomNavigationBar: bar,
       ),
     );
@@ -71,21 +59,19 @@ class PageA extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // watch
-    final test = ref.watch(testNotifierProvider);
+    final test = ref.watch(testProvider);
     // ボタン
     final button = FloatingActionButton(
       backgroundColor: Colors.orange,
       onPressed: () {
-        ref.read(testNotifierProvider.notifier).minus();
+        ref.read(testProvider.notifier).minus();
       },
       child: const Icon(Icons.remove),
     );
     // 画面
     return Scaffold(
       floatingActionButton: button,
-      body: Center(
-        child: Text('$test'),
-      ),
+      body: Center(child: Text('$test')),
     );
   }
 }
@@ -97,21 +83,19 @@ class PageB extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // watch
-    final test = ref.watch(testNotifierProvider);
+    final test = ref.watch(testProvider);
     // ボタン
     final button = FloatingActionButton(
       backgroundColor: Colors.orange,
       onPressed: () {
-        ref.read(testNotifierProvider.notifier).plus();
+        ref.read(testProvider.notifier).plus();
       },
       child: const Icon(Icons.add),
     );
     // 画面
     return Scaffold(
       floatingActionButton: button,
-      body: Center(
-        child: Text('$test'),
-      ),
+      body: Center(child: Text('$test')),
     );
   }
 }

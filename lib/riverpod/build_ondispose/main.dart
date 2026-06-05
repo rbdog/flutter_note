@@ -56,7 +56,7 @@ class Page2 extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final count = ref.watch(countNotifierProvider);
+    final count = ref.watch(countProvider);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
@@ -84,12 +84,12 @@ class Page3 extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     // 数値
-    final count = ref.watch(countNotifierProvider);
+    final count = ref.watch(countProvider);
 
     // ボタン
     final button = FloatingActionButton(
       onPressed: () {
-        final notifier = ref.read(countNotifierProvider.notifier);
+        final notifier = ref.read(countProvider.notifier);
         notifier.updateState();
       },
       child: const Icon(Icons.add),

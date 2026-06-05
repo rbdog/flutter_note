@@ -8,9 +8,9 @@ part 'cache.g.dart';
 // 平均点
 
 @Riverpod(keepAlive: true)
-int cacheAverage(CacheAverageRef ref) {
+int cacheAverage(Ref ref) {
   debugPrint('平均点を計算します');
-  final scores = ref.watch(scoreNotifierProvider);
+  final scores = ref.watch(scoreProvider);
   final average = scores.reduce((a, b) => a + b) / scores.length;
   return average.toInt();
 }
@@ -18,9 +18,9 @@ int cacheAverage(CacheAverageRef ref) {
 // 最高点
 
 @Riverpod(keepAlive: true)
-int cacheMax(CacheMaxRef ref) {
+int cacheMax(Ref ref) {
   debugPrint('最大を計算します');
-  final scores = ref.watch(scoreNotifierProvider);
+  final scores = ref.watch(scoreProvider);
   final maxScore = scores.reduce(max);
   return maxScore;
 }

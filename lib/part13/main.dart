@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+// MEMO: StateProvider は Riverpod 3 で legacy 扱いになったため legacy.dart から import します
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:banana/part13/page_a.dart';
 import 'package:banana/part13/page_b.dart';
 import 'package:banana/part13/page_c.dart';

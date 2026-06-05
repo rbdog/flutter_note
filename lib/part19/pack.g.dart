@@ -6,15 +6,14 @@ part of 'pack.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PackImpl _$$PackImplFromJson(Map<String, dynamic> json) => _$PackImpl(
-      size: json['size'] as String,
-      price: json['price'] as int,
-      content: Vegetable.fromJson(json['content'] as Map<String, dynamic>),
-    );
+_Pack _$PackFromJson(Map<String, dynamic> json) => _Pack(
+  size: json['size'] as String,
+  price: (json['price'] as num).toInt(),
+  content: Vegetable.fromJson(json['content'] as Map<String, dynamic>),
+);
 
-Map<String, dynamic> _$$PackImplToJson(_$PackImpl instance) =>
-    <String, dynamic>{
-      'size': instance.size,
-      'price': instance.price,
-      'content': instance.content,
-    };
+Map<String, dynamic> _$PackToJson(_Pack instance) => <String, dynamic>{
+  'size': instance.size,
+  'price': instance.price,
+  'content': instance.content,
+};

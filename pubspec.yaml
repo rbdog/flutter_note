@@ -5,48 +5,49 @@ version: 1.0.0+1
 
 environment:
   sdk: ^3.9.0
+  flutter: ">=3.44.0"
 
 dependencies:
-  google_generative_ai:
-  file_picker:
-  arkit_plugin:
+  google_generative_ai: ^0.4.7
+  file_picker: ^11.0.2
+  arkit_plugin: ^1.3.0
   flutter:
     sdk: flutter
-  flutter_riverpod:
-  flutter_hooks:
-  riverpod_annotation:
-  google_fonts:
-  flutter_slidable:
-  json_annotation:
-  freezed_annotation:
-  liveroom:
-  percent_indicator:
-  go_router:
-  pixel_color_image:
-  web_socket_channel:
-  firebase_core:
-  firebase_analytics:
-  firebase_auth:
-  google_sign_in:
-  device_preview_minus: # device_preview が開発停止したため代わりに使う
-  envied:
-  shared_preferences:
-  cloud_firestore:
-  intl:
-  youtube_player_iframe:
-  url_launcher:
+  flutter_riverpod: ^3.3.1
+  flutter_hooks: ^0.21.3+1
+  riverpod_annotation: ^4.0.2
+  google_fonts: ^8.1.0
+  flutter_slidable: ^4.0.3
+  json_annotation: ^4.11.0 # json_serializable 6.13.x が json_annotation <4.12.0 を要求するため合わせる
+  freezed_annotation: ^3.1.0
+  liveroom: ^1.2.0
+  percent_indicator: ^4.2.5
+  go_router: ^17.3.0
+  pixel_color_image: ^1.5.0
+  web_socket_channel: ^3.0.3
+  firebase_core: ^4.10.0
+  firebase_analytics: ^12.4.2
+  firebase_auth: ^6.5.2
+  google_sign_in: ^7.2.0
+  device_preview_minus: ^1.5.0 # device_preview が開発停止したため代わりに使う
+  envied: ^1.3.5
+  shared_preferences: ^2.5.5
+  cloud_firestore: ^6.5.0
+  intl: ^0.20.2
+  youtube_player_iframe: ^6.0.2
+  url_launcher: ^6.3.2
   flutter_web_plugins:
     sdk: flutter
 
 dev_dependencies:
-  freezed:
-  build_runner:
-  json_serializable:
+  freezed: ^3.2.5
+  build_runner: ^2.15.0
+  json_serializable: ">=6.13.0 <6.14.0" # 6.14.0 は analyzer >=10 が必要で riverpod_generator 4.0.3(stable) と競合するため据え置き
   flutter_test:
     sdk: flutter
-  flutter_lints:
-  riverpod_generator:
-  envied_generator:
+  flutter_lints: ^6.0.0
+  riverpod_generator: ^4.0.3
+  envied_generator: ^1.3.5
 
 flutter:
   uses-material-design: true

@@ -6,7 +6,7 @@ part 'realtime.g.dart';
 
 /// J-POP の数を監視
 @riverpod
-Stream<int> jpopCount(JpopCountRef ref) {
+Stream<int> jpopCount(Ref ref) {
   final db = FirebaseFirestore.instance;
 
   // データベースを監視

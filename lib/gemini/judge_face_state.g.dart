@@ -6,21 +6,49 @@ part of 'judge_face_state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
+
+@ProviderFor(FaceAgeNotifier)
+final faceAgeProvider = FaceAgeNotifierProvider._();
+
+final class FaceAgeNotifierProvider
+    extends $AsyncNotifierProvider<FaceAgeNotifier, String?> {
+  FaceAgeNotifierProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'faceAgeProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$faceAgeNotifierHash();
+
+  @$internal
+  @override
+  FaceAgeNotifier create() => FaceAgeNotifier();
+}
+
 String _$faceAgeNotifierHash() => r'495a0f6fb5f6b99f322baaed3ae5668af1b6e109';
 
-/// See also [FaceAgeNotifier].
-@ProviderFor(FaceAgeNotifier)
-final faceAgeNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<FaceAgeNotifier, String?>.internal(
-  FaceAgeNotifier.new,
-  name: r'faceAgeNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$faceAgeNotifierHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef _$FaceAgeNotifier = AutoDisposeAsyncNotifier<String?>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+abstract class _$FaceAgeNotifier extends $AsyncNotifier<String?> {
+  FutureOr<String?> build();
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<String?>, String?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<String?>, String?>,
+              AsyncValue<String?>,
+              Object?,
+              Object?
+            >;
+    element.handleCreate(ref, build);
+  }
+}
