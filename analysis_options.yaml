@@ -8,3 +8,6 @@ analyzer:
     - "build/**" # iOS ビルドが SourcePackages にチェックアウトするプラグインのソースを解析対象から除外
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - android/**
+    - ios/**
+    - web/**

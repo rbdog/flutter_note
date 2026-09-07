@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'recipe.dart';
@@ -9,16 +9,14 @@ part of 'recipe.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Recipe {
 
-// タイトル
- String get title;// カロリー
- int get calories;// 必要な野菜たち
- List<Vegetable> get vegetables;
+ String get title; int get calories; List<Vegetable> get vegetables;
 /// Create a copy of Recipe
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -31,16 +29,21 @@ $RecipeCopyWith<Recipe> get copyWith => _$RecipeCopyWithImpl<Recipe>(this as Rec
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Recipe&&(identical(other.title, title) || other.title == title)&&(identical(other.calories, calories) || other.calories == calories)&&const DeepCollectionEquality().equals(other.vegetables, vegetables));
+  final _this = this as Recipe;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Recipe&&(identical(other.title, _this.title) || other.title == _this.title)&&(identical(other.calories, _this.calories) || other.calories == _this.calories)&&const DeepCollectionEquality().equals(other.vegetables, _this.vegetables));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,calories,const DeepCollectionEquality().hash(vegetables));
+int get hashCode {
+  final _this = this as Recipe;
+  return Object.hash(runtimeType,_this.title,_this.calories,const DeepCollectionEquality().hash(_this.vegetables));
+}
 
 @override
 String toString() {
-  return 'Recipe(title: $title, calories: $calories, vegetables: $vegetables)';
+  final _this = this as Recipe;
+  return 'Recipe(title: ${_this.title}, calories: ${_this.calories}, vegetables: ${_this.vegetables})';
 }
 
 
@@ -69,7 +72,7 @@ class _$RecipeCopyWithImpl<$Res>
 /// Create a copy of Recipe
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? title = null,Object? calories = null,Object? vegetables = null,}) {
-  return _then(_self.copyWith(
+  return _then(Recipe(
 title: null == title ? _self.title : title // ignore: cast_nullable_to_non_nullable
 as String,calories: null == calories ? _self.calories : calories // ignore: cast_nullable_to_non_nullable
 as int,vegetables: null == vegetables ? _self.vegetables : vegetables // ignore: cast_nullable_to_non_nullable
@@ -214,16 +217,12 @@ return $default(_that.title,_that.calories,_that.vegetables);case _:
 @JsonSerializable()
 
 class _Recipe implements Recipe {
-  const _Recipe({required this.title, required this.calories, required final  List<Vegetable> vegetables}): _vegetables = vegetables;
+  const _Recipe({required this.title, required this.calories, required  List<Vegetable> vegetables}): _vegetables = vegetables;
   factory _Recipe.fromJson(Map<String, dynamic> json) => _$RecipeFromJson(json);
 
-// タイトル
 @override final  String title;
-// カロリー
 @override final  int calories;
-// 必要な野菜たち
  final  List<Vegetable> _vegetables;
-// 必要な野菜たち
 @override List<Vegetable> get vegetables {
   if (_vegetables is EqualUnmodifiableListView) return _vegetables;
   // ignore: implicit_dynamic_type
@@ -244,16 +243,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Recipe&&(identical(other.title, title) || other.title == title)&&(identical(other.calories, calories) || other.calories == calories)&&const DeepCollectionEquality().equals(other._vegetables, _vegetables));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Recipe&&(identical(other.title, title) || other.title == title)&&(identical(other.calories, calories) || other.calories == calories)&&const DeepCollectionEquality().equals(other.vegetables, _vegetables));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,title,calories,const DeepCollectionEquality().hash(_vegetables));
+int get hashCode {
+    return Object.hash(runtimeType,title,calories,const DeepCollectionEquality().hash(_vegetables));
+}
 
 @override
 String toString() {
-  return 'Recipe(title: $title, calories: $calories, vegetables: $vegetables)';
+    return 'Recipe(title: $title, calories: $calories, vegetables: $vegetables)';
 }
 
 

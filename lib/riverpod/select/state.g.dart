@@ -47,7 +47,7 @@ abstract class _$ShikokuNotifier extends $Notifier<Shikoku> {
   Shikoku build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<Shikoku, Shikoku>;
     final element =
         ref.element
@@ -57,6 +57,6 @@ abstract class _$ShikokuNotifier extends $Notifier<Shikoku> {
               Object?,
               Object?
             >;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

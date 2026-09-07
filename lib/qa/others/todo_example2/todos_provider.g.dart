@@ -48,7 +48,7 @@ abstract class _$TodoModelsNotifier extends $Notifier<List<TodoModel>> {
   List<TodoModel> build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<List<TodoModel>, List<TodoModel>>;
     final element =
         ref.element
@@ -58,6 +58,6 @@ abstract class _$TodoModelsNotifier extends $Notifier<List<TodoModel>> {
               Object?,
               Object?
             >;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

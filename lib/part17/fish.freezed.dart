@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'fish.dart';
@@ -9,15 +9,13 @@ part of 'fish.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$Fish {
 
-// 名前
- String get name;// 大きさ
- int get size;// 値段
- int get price;
+ String get name; int get size; int get price;
 /// Create a copy of Fish
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -28,16 +26,21 @@ $FishCopyWith<Fish> get copyWith => _$FishCopyWithImpl<Fish>(this as Fish, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Fish&&(identical(other.name, name) || other.name == name)&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price));
+  final _this = this as Fish;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Fish&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.size, _this.size) || other.size == _this.size)&&(identical(other.price, _this.price) || other.price == _this.price));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,name,size,price);
+int get hashCode {
+  final _this = this as Fish;
+  return Object.hash(runtimeType,_this.name,_this.size,_this.price);
+}
 
 @override
 String toString() {
-  return 'Fish(name: $name, size: $size, price: $price)';
+  final _this = this as Fish;
+  return 'Fish(name: ${_this.name}, size: ${_this.size}, price: ${_this.price})';
 }
 
 
@@ -66,7 +69,7 @@ class _$FishCopyWithImpl<$Res>
 /// Create a copy of Fish
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? size = null,Object? price = null,}) {
-  return _then(_self.copyWith(
+  return _then(Fish(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,size: null == size ? _self.size : size // ignore: cast_nullable_to_non_nullable
 as int,price: null == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
@@ -214,11 +217,8 @@ class _Fish implements Fish {
   const _Fish({required this.name, required this.size, required this.price});
   
 
-// 名前
 @override final  String name;
-// 大きさ
 @override final  int size;
-// 値段
 @override final  int price;
 
 /// Create a copy of Fish
@@ -231,16 +231,18 @@ _$FishCopyWith<_Fish> get copyWith => __$FishCopyWithImpl<_Fish>(this, _$identit
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Fish&&(identical(other.name, name) || other.name == name)&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Fish&&(identical(other.name, name) || other.name == name)&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,name,size,price);
+int get hashCode {
+    return Object.hash(runtimeType,name,size,price);
+}
 
 @override
 String toString() {
-  return 'Fish(name: $name, size: $size, price: $price)';
+    return 'Fish(name: $name, size: $size, price: $price)';
 }
 
 

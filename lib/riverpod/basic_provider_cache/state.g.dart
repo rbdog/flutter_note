@@ -47,7 +47,7 @@ abstract class _$ScoreNotifier extends $Notifier<List<int>> {
   List<int> build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<List<int>, List<int>>;
     final element =
         ref.element
@@ -57,6 +57,6 @@ abstract class _$ScoreNotifier extends $Notifier<List<int>> {
               Object?,
               Object?
             >;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

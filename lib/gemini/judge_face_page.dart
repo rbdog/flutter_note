@@ -55,16 +55,16 @@ class _PickButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ElevatedButton(
       onPressed: () async {
-        // MEMO: file_picker 11 では FilePicker.platform が廃止され FilePicker.pickFiles() を直接呼びます
+        // MEMO: file_picker 12 では FilePickerResult が廃止され、単一選択は
+        // FilePicker.pickFile() が PlatformFile? を返します。バイト列は readAsBytes() で取得します
 
-        final result = await FilePicker.pickFiles();
-        if (result == null) return;
-        if (result.files.single.extension != 'png') {
+        final file = await FilePicker.pickFile();
+        if (file == null) return;
+        if (file.extension != 'png') {
           debugPrint('画像形式がpngのものを選択してください');
           return;
         }
-        final bytes = result.files.single.bytes;
-        if (bytes == null) return;
+        final bytes = await file.readAsBytes();
         onPicked(bytes);
       },
       child: const Text('写真を選択'),

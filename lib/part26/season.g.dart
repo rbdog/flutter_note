@@ -52,7 +52,7 @@ abstract class _$SeasonNotifier extends $Notifier<Season> {
   Season build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<Season, Season>;
     final element =
         ref.element
@@ -62,6 +62,6 @@ abstract class _$SeasonNotifier extends $Notifier<Season> {
               Object?,
               Object?
             >;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

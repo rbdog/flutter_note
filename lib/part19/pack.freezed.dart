@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'pack.dart';
@@ -9,16 +9,14 @@ part of 'pack.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Pack {
 
-// 大きさ
- String get size;// 値段
- int get price;// 中身の野菜
- Vegetable get content;
+ String get size; int get price; Vegetable get content;
 /// Create a copy of Pack
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -31,16 +29,21 @@ $PackCopyWith<Pack> get copyWith => _$PackCopyWithImpl<Pack>(this as Pack, _$ide
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Pack&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price)&&(identical(other.content, content) || other.content == content));
+  final _this = this as Pack;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Pack&&(identical(other.size, _this.size) || other.size == _this.size)&&(identical(other.price, _this.price) || other.price == _this.price)&&(identical(other.content, _this.content) || other.content == _this.content));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,size,price,content);
+int get hashCode {
+  final _this = this as Pack;
+  return Object.hash(runtimeType,_this.size,_this.price,_this.content);
+}
 
 @override
 String toString() {
-  return 'Pack(size: $size, price: $price, content: $content)';
+  final _this = this as Pack;
+  return 'Pack(size: ${_this.size}, price: ${_this.price}, content: ${_this.content})';
 }
 
 
@@ -69,7 +72,7 @@ class _$PackCopyWithImpl<$Res>
 /// Create a copy of Pack
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? size = null,Object? price = null,Object? content = null,}) {
-  return _then(_self.copyWith(
+  return _then(Pack(
 size: null == size ? _self.size : size // ignore: cast_nullable_to_non_nullable
 as String,price: null == price ? _self.price : price // ignore: cast_nullable_to_non_nullable
 as int,content: null == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
@@ -226,11 +229,8 @@ class _Pack implements Pack {
   const _Pack({required this.size, required this.price, required this.content});
   factory _Pack.fromJson(Map<String, dynamic> json) => _$PackFromJson(json);
 
-// 大きさ
 @override final  String size;
-// 値段
 @override final  int price;
-// 中身の野菜
 @override final  Vegetable content;
 
 /// Create a copy of Pack
@@ -246,16 +246,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Pack&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price)&&(identical(other.content, content) || other.content == content));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Pack&&(identical(other.size, size) || other.size == size)&&(identical(other.price, price) || other.price == price)&&(identical(other.content, content) || other.content == content));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,size,price,content);
+int get hashCode {
+    return Object.hash(runtimeType,size,price,content);
+}
 
 @override
 String toString() {
-  return 'Pack(size: $size, price: $price, content: $content)';
+    return 'Pack(size: $size, price: $price, content: $content)';
 }
 
 

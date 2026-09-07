@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'abc_list.dart';
@@ -9,6 +9,7 @@ part of 'abc_list.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -25,16 +26,21 @@ $AbcListCopyWith<AbcList> get copyWith => _$AbcListCopyWithImpl<AbcList>(this as
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is AbcList&&const DeepCollectionEquality().equals(other.values, values));
+  final _this = this as AbcList;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AbcList&&const DeepCollectionEquality().equals(other.values, _this.values));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(values));
+int get hashCode {
+  final _this = this as AbcList;
+  return Object.hash(runtimeType,const DeepCollectionEquality().hash(_this.values));
+}
 
 @override
 String toString() {
-  return 'AbcList(values: $values)';
+  final _this = this as AbcList;
+  return 'AbcList(values: ${_this.values})';
 }
 
 
@@ -63,8 +69,8 @@ class _$AbcListCopyWithImpl<$Res>
 /// Create a copy of AbcList
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? values = null,}) {
-  return _then(_self.copyWith(
-values: null == values ? _self.values : values // ignore: cast_nullable_to_non_nullable
+  return _then(AbcList(
+null == values ? _self.values : values // ignore: cast_nullable_to_non_nullable
 as List<String>,
   ));
 }
@@ -206,7 +212,7 @@ return $default(_that.values);case _:
 
 
 class _AbcList implements AbcList {
-   _AbcList(final  List<String> values): _values = values;
+   _AbcList( List<String> values): _values = values;
   
 
  final  List<String> _values;
@@ -227,16 +233,18 @@ _$AbcListCopyWith<_AbcList> get copyWith => __$AbcListCopyWithImpl<_AbcList>(thi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AbcList&&const DeepCollectionEquality().equals(other._values, _values));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AbcList&&const DeepCollectionEquality().equals(other.values, _values));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(_values));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(_values));
+}
 
 @override
 String toString() {
-  return 'AbcList(values: $values)';
+    return 'AbcList(values: $values)';
 }
 
 

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'vegetable.dart';
@@ -9,16 +9,14 @@ part of 'vegetable.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 
 /// @nodoc
 mixin _$Vegetable {
 
-// 名前
- String get name;// 色
- String get color;// 旬の季節
- String get season;
+ String get name; String get color; String get season;
 /// Create a copy of Vegetable
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -31,16 +29,21 @@ $VegetableCopyWith<Vegetable> get copyWith => _$VegetableCopyWithImpl<Vegetable>
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is Vegetable&&(identical(other.name, name) || other.name == name)&&(identical(other.color, color) || other.color == color)&&(identical(other.season, season) || other.season == season));
+  final _this = this as Vegetable;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Vegetable&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.color, _this.color) || other.color == _this.color)&&(identical(other.season, _this.season) || other.season == _this.season));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,color,season);
+int get hashCode {
+  final _this = this as Vegetable;
+  return Object.hash(runtimeType,_this.name,_this.color,_this.season);
+}
 
 @override
 String toString() {
-  return 'Vegetable(name: $name, color: $color, season: $season)';
+  final _this = this as Vegetable;
+  return 'Vegetable(name: ${_this.name}, color: ${_this.color}, season: ${_this.season})';
 }
 
 
@@ -69,7 +72,7 @@ class _$VegetableCopyWithImpl<$Res>
 /// Create a copy of Vegetable
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') @override $Res call({Object? name = null,Object? color = null,Object? season = null,}) {
-  return _then(_self.copyWith(
+  return _then(Vegetable(
 name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
 as String,color: null == color ? _self.color : color // ignore: cast_nullable_to_non_nullable
 as String,season: null == season ? _self.season : season // ignore: cast_nullable_to_non_nullable
@@ -217,11 +220,8 @@ class _Vegetable implements Vegetable {
   const _Vegetable({required this.name, required this.color, required this.season});
   factory _Vegetable.fromJson(Map<String, dynamic> json) => _$VegetableFromJson(json);
 
-// 名前
 @override final  String name;
-// 色
 @override final  String color;
-// 旬の季節
 @override final  String season;
 
 /// Create a copy of Vegetable
@@ -237,16 +237,18 @@ Map<String, dynamic> toJson() {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _Vegetable&&(identical(other.name, name) || other.name == name)&&(identical(other.color, color) || other.color == color)&&(identical(other.season, season) || other.season == season));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Vegetable&&(identical(other.name, name) || other.name == name)&&(identical(other.color, color) || other.color == color)&&(identical(other.season, season) || other.season == season));
 }
 
 @JsonKey(includeFromJson: false, includeToJson: false)
 @override
-int get hashCode => Object.hash(runtimeType,name,color,season);
+int get hashCode {
+    return Object.hash(runtimeType,name,color,season);
+}
 
 @override
 String toString() {
-  return 'Vegetable(name: $name, color: $color, season: $season)';
+    return 'Vegetable(name: $name, color: $color, season: $season)';
 }
 
 
